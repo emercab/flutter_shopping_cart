@@ -9,6 +9,8 @@ class ShoppingController extends GetxController {
   // el valor total de la compra
   var total = 0.obs;
 
+  final numArticulos = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
@@ -17,7 +19,11 @@ class ShoppingController extends GetxController {
     entries.add(Product(1, "Redmi Note 11", 189));
     entries.add(Product(2, "Galaxy A53", 329));
     entries.add(Product(3, "Mi Band 6", 35));
-    entries.add(Product(4, "HP Ventus", 1039));
+    entries.add(Product(4, "HP Victus", 1039));
+    entries.add(Product(5, "Motorola G60", 185));
+    entries.add(Product(6, "Ipad Mini 7.9", 540));
+    entries.add(Product(7, "Realme 9 Pro+", 443));
+    entries.add(Product(8, "IdeaPad Gam 3", 749));
   }
 
   void calcularTotal() {
@@ -42,6 +48,7 @@ class ShoppingController extends GetxController {
     entries[productIndex].quantity++;
 
     calcularTotal();
+    countProducts();
   }
 
   quitarProducto(id) {
@@ -56,5 +63,15 @@ class ShoppingController extends GetxController {
     }
 
     calcularTotal();
+    countProducts();
+  }
+
+  void countProducts() {
+    int num = 0;
+    for (var product in entries) {
+      num += product.quantity;
+    }
+
+    numArticulos.value = num;
   }
 }

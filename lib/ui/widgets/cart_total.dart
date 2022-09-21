@@ -21,23 +21,33 @@ class CartTotal extends StatelessWidget {
         //DONE
         // aquí debemos observar la variable total del shoppingController
         child: Obx(
-          () => Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          () => Column(
             children: [
-              Text(
-                'Total: ',
-                style: TextStyle(
-                    fontSize: 28,
-                    color: Colors.blue[900],
-                    fontWeight: FontWeight.bold),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Total: ',
+                    style: TextStyle(
+                        fontSize: 28,
+                        color: Colors.blue[900],
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'US\$ ${formatCurrency(double.parse(shoppingController.total.value.toString()))}',
+                    style: TextStyle(
+                        fontSize: 28,
+                        color: Colors.green[900],
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
+              const SizedBox(height: 5),
               Text(
-                'US\$ ${formatCurrency(double.parse(shoppingController.total.value.toString()))}',
-                style: TextStyle(
-                    fontSize: 28,
-                    color: Colors.green[900],
-                    fontWeight: FontWeight.bold),
-              ),
+                'Artículos comprados: ${shoppingController.numArticulos.value}',
+                style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              )
             ],
           ),
         ),

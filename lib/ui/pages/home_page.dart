@@ -32,22 +32,23 @@ class HomePage extends StatelessWidget {
           ),
           const SizedBox(height: 60),
           const Text(
-            "Brad Wilson",
+            "Carlos Pérez",
             style: TextStyle(
               fontSize: 28,
               color: Color(0xff9c0730),
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 5),
           const Text(
             "Valledupar, Colombia",
             style: TextStyle(
-              fontSize: 18.0,
+              fontSize: 20,
               color: Colors.black,
             ),
           ),
-          CartTotal()
+          const SizedBox(height: 60),
+          CartTotal(),
         ],
       ),
     );

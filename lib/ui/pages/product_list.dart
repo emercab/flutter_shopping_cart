@@ -18,6 +18,7 @@ class _ProductListState extends State<ProductList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue[200],
       body: SafeArea(
         child: Column(
           children: [
@@ -68,70 +69,80 @@ class _ProductListState extends State<ProductList> {
 
   Widget _card(Product product) {
     return Card(
-      margin: const EdgeInsets.all(4.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Text(
-            product.name,
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          Text('US\$ ${product.price.toString()}',
-              style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue[900])),
-          Column(
-            children: [
-              IconButton(
-                  onPressed: () {
-                    // DONE
-                    // aquí debemos llamar al método del controlador que
-                    // incrementa el número de unidades del producto
-                    // pasandole el product.id
-                    shoppingController.agregarProducto(product.id);
-                    setState(() {});
-                  },
-                  icon: const Icon(
-                    Icons.arrow_upward,
-                    size: 25,
-                    color: Color(0xff9c0730),
-                  )),
-              IconButton(
-                  onPressed: () {
-                    // DONE
-                    // aquí debemos llamar al método del controlador que
-                    // disminuye el número de unidades del producto
-                    // pasandole el product.id
-                    shoppingController.quitarProducto(product.id);
-                    setState(() {});
-                  },
-                  icon: const Icon(
-                    Icons.arrow_downward,
-                    size: 25,
-                    color: Color(0xff9c0730),
-                  ))
-            ],
-          ),
-          Column(
-            children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text("Quantity:",
-                    style:
-                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(product.quantity.toString(),
-                    style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.green[900])),
-              ),
-            ],
-          )
-        ],
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+      elevation: 8,
+      color: Colors.blue[50],
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(15),
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(
+              product.name,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            Text('US\$ ${product.price.toString()}',
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue[900])),
+            Column(
+              children: [
+                IconButton(
+                    onPressed: () {
+                      // DONE
+                      // aquí debemos llamar al método del controlador que
+                      // incrementa el número de unidades del producto
+                      // pasandole el product.id
+                      shoppingController.agregarProducto(product.id);
+                      setState(() {});
+                    },
+                    icon: const Icon(
+                      Icons.arrow_upward,
+                      size: 25,
+                      color: Color(0xff9c0730),
+                    )),
+                IconButton(
+                    onPressed: () {
+                      // DONE
+                      // aquí debemos llamar al método del controlador que
+                      // disminuye el número de unidades del producto
+                      // pasandole el product.id
+                      shoppingController.quitarProducto(product.id);
+                      setState(() {});
+                    },
+                    icon: const Icon(
+                      Icons.arrow_downward,
+                      size: 25,
+                      color: Color(0xff9c0730),
+                    ))
+              ],
+            ),
+            Column(
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text("Quantity:",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(product.quantity.toString(),
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.green[900])),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

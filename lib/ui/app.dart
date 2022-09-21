@@ -14,8 +14,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Poppins',
       ),
-      home: const Scaffold(
-        body: HomePage(),
+      home: Scaffold(
+        backgroundColor: Colors.blue[200],
+        body: const HomePage(),
       ),
     );
   }
