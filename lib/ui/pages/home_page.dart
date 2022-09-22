@@ -78,7 +78,7 @@ class HomePage extends StatelessWidget {
           child: GestureDetector(
             onTap: () => Get.to(() => const ProductList(),
                 transition: Transition.circularReveal,
-                duration: const Duration(milliseconds: 500)),
+                duration: const Duration(milliseconds: 300)),
             child: const Icon(
               Icons.shopping_cart,
               size: 40,

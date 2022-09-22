@@ -31,11 +31,11 @@ class _ProductListState extends State<ProductList> {
             Obx(
               () => Expanded(
                 child: ListView.builder(
-                    padding: const EdgeInsets.all(8),
-                    itemCount: shoppingController.entries.length,
-                    itemBuilder: (context, index) {
-                      return _row(shoppingController.entries[index], index);
-                    }),
+                  itemCount: shoppingController.entries.length,
+                  itemBuilder: (context, index) {
+                    return _row(shoppingController.entries[index], index);
+                  },
+                ),
               ),
             ),
           ],
@@ -64,7 +64,7 @@ class _ProductListState extends State<ProductList> {
   }
 
   Widget _row(Product product, int index) {
-    return _card(product);
+    return _card2(product);
   }
 
   Widget _card(Product product) {
@@ -141,6 +141,87 @@ class _ProductListState extends State<ProductList> {
                 ),
               ],
             )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _card2(Product product) {
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 24),
+      elevation: 8,
+      color: Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(15),
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        child: Column(
+          children: [
+            Image.network(
+              product.urlImage,
+              width: 120,
+            ),
+            Text(product.name,
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue[900],
+                )),
+            Text('US\$ ${product.price}',
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                )),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Buy now! ',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green[900],
+                    )),
+                IconButton(
+                    onPressed: () {
+                      // DONE
+                      // aquí debemos llamar al método del controlador que
+                      // incrementa el número de unidades del producto
+                      // pasandole el product.id
+                      shoppingController.agregarProducto(product.id);
+                      setState(() {});
+                    },
+                    icon: Icon(
+                      Icons.add_circle,
+                      size: 36,
+                      color: Colors.green[900],
+                    )),
+                Text('${product.quantity}',
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue[900],
+                    )),
+                IconButton(
+                    onPressed: () {
+                      // DONE
+                      // aquí debemos llamar al método del controlador que
+                      // disminuye el número de unidades del producto
+                      // pasandole el product.id
+                      shoppingController.quitarProducto(product.id);
+                      setState(() {});
+                    },
+                    icon: const Icon(
+                      Icons.remove_circle,
+                      size: 36,
+                      color: Color(0xff9c0730),
+                    )),
+              ],
+            ),
           ],
         ),
       ),

@@ -15,15 +15,24 @@ class ShoppingController extends GetxController {
   void onInit() {
     super.onInit();
     // los elementos que vamos a tener en la tienda
-    entries.add(Product(0, "Iphone 12", 899));
-    entries.add(Product(1, "Redmi Note 11", 189));
-    entries.add(Product(2, "Galaxy A53", 329));
-    entries.add(Product(3, "Mi Band 6", 35));
-    entries.add(Product(4, "HP Victus", 1039));
-    entries.add(Product(5, "Motorola G60", 185));
-    entries.add(Product(6, "Ipad Mini 7.9", 540));
-    entries.add(Product(7, "Realme 9 Pro+", 443));
-    entries.add(Product(8, "IdeaPad Gam 3", 749));
+    entries.add(Product(0, "Iphone 12", 899,
+        'https://hsi.com.co/wp-content/uploads/2022/03/Imagen-Apple-iPhone-12-64GB-Usado-A-negro.jpg'));
+    entries.add(Product(1, "Redmi Note 11", 189,
+        'https://i.linio.com/p/327764a3c2cae0d951c91647024ec859-product.webp'));
+    entries.add(Product(2, "Galaxy A53", 329,
+        'https://www.tiendaamiga.com.bo/media/catalog/product/a/5/a53.jpg'));
+    entries.add(Product(3, "Mi Band 6", 35,
+        'https://xiaomicolombia.vtexassets.com/arquivos/ids/155608-800-auto?v=637618949048100000&width=800&height=auto&aspect=true'));
+    entries.add(Product(4, "HP Victus", 1039,
+        'https://www.alkomprar.com/medias/196337885103-001-750Wx750H?context=bWFzdGVyfGltYWdlc3wxMjk3MTF8aW1hZ2UvanBlZ3xpbWFnZXMvaDkzL2g0NS8xMTc1MjAxNTcyNDU3NC5qcGd8M2Q2YWQwMTE3MmFhZDQyMTc5ZDA0ZTRiZTNjMzhhZGYwMWM0M2UwNzc5MTA1MjU1ZGFmZDY4MWE5ZjYyNTAxZQ'));
+    entries.add(Product(5, "Motorola G60", 185,
+        'https://tigocolombia.vteximg.com.br/arquivos/ids/160571-1000-1000/G60_SOFT-SILVER_1.png'));
+    entries.add(Product(6, "Ipad Mini 7.9", 540,
+        'https://falabella.scene7.com/is/image/FalabellaCO/3848786_1?wid=800&hei=800&qlt=70'));
+    entries.add(Product(7, "Realme 9 Pro+", 443,
+        'https://conectamos.shop/wp-content/uploads/2022/03/realme_9_pro__5g_8gb_256gb_negro_01_l.jpg'));
+    entries.add(Product(8, "IdeaPad Gaming 3", 749,
+        'https://www.lenovo.com/medias/lenovo-laptops-ideapad-gaming-3-gen-7-16-amd-hero.png?context=bWFzdGVyfHJvb3R8NTQyMzIxfGltYWdlL3BuZ3xoMzcvaDg1LzE0MzMyMDI3MDQzODcwLnBuZ3xkOTVlMjIyMGIzODJiMzJjNWQxMDJiMjQ3NGJlNWFiZDFiZmQ2Njc2MWY5MmQ0Y2JkMTA1MDRiZGVjZTFiYjVm'));
   }
 
   void calcularTotal() {
