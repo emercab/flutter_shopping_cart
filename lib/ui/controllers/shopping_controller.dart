@@ -20,7 +20,7 @@ class ShoppingController extends GetxController {
     entries.add(Product(1, "Redmi Note 11", 189,
         'https://i.linio.com/p/327764a3c2cae0d951c91647024ec859-product.webp'));
     entries.add(Product(2, "Galaxy A53", 329,
-        'https://www.tiendaamiga.com.bo/media/catalog/product/a/5/a53.jpg'));
+        'https://jumbocolombiaio.vtexassets.com/arquivos/ids/377473-800-800?v=637910794335800000&width=800&height=800&aspect=true'));
     entries.add(Product(3, "Mi Band 6", 35,
         'https://xiaomicolombia.vtexassets.com/arquivos/ids/155608-800-auto?v=637618949048100000&width=800&height=auto&aspect=true'));
     entries.add(Product(4, "HP Victus", 1039,
@@ -32,7 +32,7 @@ class ShoppingController extends GetxController {
     entries.add(Product(7, "Realme 9 Pro+", 443,
         'https://conectamos.shop/wp-content/uploads/2022/03/realme_9_pro__5g_8gb_256gb_negro_01_l.jpg'));
     entries.add(Product(8, "IdeaPad Gaming 3", 749,
-        'https://www.lenovo.com/medias/lenovo-laptops-ideapad-gaming-3-gen-7-16-amd-hero.png?context=bWFzdGVyfHJvb3R8NTQyMzIxfGltYWdlL3BuZ3xoMzcvaDg1LzE0MzMyMDI3MDQzODcwLnBuZ3xkOTVlMjIyMGIzODJiMzJjNWQxMDJiMjQ3NGJlNWFiZDFiZmQ2Njc2MWY5MmQ0Y2JkMTA1MDRiZGVjZTFiYjVm'));
+        'https://m.media-amazon.com/images/I/71gQFbwlabL._AC_SY450_.jpg'));
   }
 
   void calcularTotal() {
