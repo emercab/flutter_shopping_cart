@@ -55,6 +55,7 @@ class ShoppingController extends GetxController {
     Product foundProduct = entries.firstWhere((prod) => prod.id == id);
     int productIndex = entries.indexOf(foundProduct);
     entries[productIndex].quantity++;
+    entries.refresh();
 
     calcularTotal();
     countProducts();
@@ -70,6 +71,7 @@ class ShoppingController extends GetxController {
     if (entries[productIndex].quantity != 0) {
       entries[productIndex].quantity--;
     }
+    entries.refresh();
 
     calcularTotal();
     countProducts();

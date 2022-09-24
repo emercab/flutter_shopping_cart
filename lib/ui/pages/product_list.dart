@@ -113,7 +113,6 @@ class _ProductListState extends State<ProductList> {
                       // incrementa el número de unidades del producto
                       // pasandole el product.id
                       shoppingController.agregarProducto(product.id);
-                      setState(() {});
                     },
                     icon: Icon(
                       Icons.add_circle,
@@ -133,7 +132,6 @@ class _ProductListState extends State<ProductList> {
                       // disminuye el número de unidades del producto
                       // pasandole el product.id
                       shoppingController.quitarProducto(product.id);
-                      setState(() {});
                     },
                     icon: const Icon(
                       Icons.remove_circle,
