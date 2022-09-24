@@ -4,8 +4,9 @@ El código incluye comentarios que explican la estructura del proyecto y los pun
 
 El siguiente es un demo de la interfaz a la que se debe llegar (funcionalidades adicionales o mejoras a la interfaz son permitidas):
 
-![shoppingApp](https://user-images.githubusercontent.com/4458129/173839525-218900ed-9bcd-4f6f-9158-0b02dd9d7707.gif)
+
+https://user-images.githubusercontent.com/111591094/192076673-3739c7de-6fee-4af5-a75a-0899826f83cf.mp4
 
 Solución:
 
-https://github.com/MisionTIC4b/f_shopping_app
+https://github.com/emercab/flutter_shopping_cart/edit/main/README.md
