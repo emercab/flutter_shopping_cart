@@ -1,12 +1,26 @@
-Proyecto base para el segundo reto
+# Reto #2
 
-El código incluye comentarios que explican la estructura del proyecto y los puntos en los que se tiene que trabajar están marcados con un TODO.
+Construcción de una aplicación de tienda la cual permite calcular el valor de las
+compras realziadas, y el número de items adquiridos en un estilo de vista de perfil
+Asís mismo, cuenta con una vista de carrito para selección de items
+el código consta de:
 
-El siguiente es un demo de la interfaz a la que se debe llegar (funcionalidades adicionales o mejoras a la interfaz son permitidas):
+## Lógica
+
+El usuario al iniciar la app debe clickear en la parte superior derecha para dirigirse al carrito,
+en la parte superior derecha, en el cual puede visualizar los articulos disponibles aca puede deslizar hacia abajo para ver
+la disponibilidad total de articulos. Dar click en (+) incrementa los articulos y (-) los saca de la compra.
+
+Finalmente al regresar a la ventana principal con el boton superior izqueirdo se muestra el total de la compra.
+
+
+## Link de repositorio
+
+https://github.com/emercab/flutter_shopping_cart.git
+
+
+## Video de Explicación
 
 
 https://user-images.githubusercontent.com/111591094/192076673-3739c7de-6fee-4af5-a75a-0899826f83cf.mp4
 
-Solución:
-
-https://github.com/emercab/flutter_shopping_cart/edit/main/README.md
