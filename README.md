@@ -21,4 +21,4 @@ https://github.com/emercab/flutter_shopping_cart.git
 
 ## Video de Explicación
 
-https://user-images.githubusercontent.com/111591094/192076673-3739c7de-6fee-4af5-a75a-0899826f83cf.mp4
+https://www.youtube.com/watch?v=rr30Z3rmKN8
